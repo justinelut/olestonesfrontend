@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0'
@@ -80,7 +80,7 @@ export default function Footer() {
         />
 
         <title>{data && data.name}</title>
-      </Helmet>
+      </Helmet> */}
       <div className='flex bg-gray-900 p-4'>
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
           <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
