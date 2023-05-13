@@ -129,13 +129,13 @@ export default function Footer() {
             </p>
 
             <div className='flex items-center text-yellow mt-4 space-x-4 sm:mt-0'>
-              <TwitterShareButton url={'https://daviddev.verixr.com'}>
+              <TwitterShareButton url={'https://olestonesbuilders.co.ke'}>
                 <TwitterIcon size={32} />
               </TwitterShareButton>
-              <WhatsappShareButton url={'https://daviddev.verixr.com'}>
+              <WhatsappShareButton url={'https://olestonesbuilders.co.ke'}>
                 <WhatsappIcon size={32} />
               </WhatsappShareButton>
-              <FacebookShareButton url={'https://daviddev.verixr.com'}>
+              <FacebookShareButton url={'https://olestonesbuilders.co.ke'}>
                 <FacebookIcon size={32} />
               </FacebookShareButton>
             </div>
