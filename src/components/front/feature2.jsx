@@ -4,6 +4,8 @@ import Nav from '../nav/nav';
 import useSWR from 'swr';
 import { fetcher } from '../api/api_utils';
 import { motion, useAnimate, usePresence } from 'framer-motion';
+import { FiMail } from 'react-icons/fi';
+
 
 function Featured2() {
   const { data } = useSWR('/api/globals/featured', fetcher);
@@ -57,7 +59,14 @@ function Featured2() {
   return (
     <section
       class='relative bg-fill pb-20 overflow-hidden'
-      ref={scope}>
+      ref={scope}
+      style={{
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundImage: `url(${data && data.image.url})`,
+        height: '100%',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      }}>
       <div
         className='absolute inset-0 opacity-60'
         style={{
@@ -75,23 +84,7 @@ function Featured2() {
         alt=''
       />
 
-      <img
-        class='absolute top-0 right-0 w-52 md:w-auto'
-        src='saturn-assets/images/headers/star-background-header.png'
-        alt=''
-      />
-      <img
-        class='absolute top-0 right-0 mt-10 mr-10'
-        src='saturn-assets/images/headers/light-orange-blue-1.png'
-        alt=''
-      />
-      <img
-        class='absolute top-0 right-0 mt-64 sm:mt-80 lg:mt-64 w-2/5 animate-moveHand'
-        src='saturn-assets/images/headers/robot-hand-header.png'
-        alt=''
-      />
-
-      <nav class='relative py-6 mb-12 md:mb-20 bg-transparent'>
+      <nav class='relative py-6 mb-4 md:mb-10 bg-transparent'>
         <Nav />
       </nav>
       <div class='relative container px-4 mx-auto'>
@@ -119,25 +112,26 @@ function Featured2() {
               </p>
             </div>
           </div>
-          <Link
-            class='relative bg-yellow-400 group inline-block w-full sm:w-auto py-4 px-6 mb-24 text-white font-semibold rounded-md bg-orange-900 overflow-hidden'
-            to='/contact'>
-            <div class='relative flex items-center justify-center'>
-              <span class='mr-4 text-black'>Contact US</span>
-              <span>
-                <svg
-                  width='8'
-                  height='12'
-                  viewbox='0 0 8 12'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'>
-                  <path
-                    d='M6.83 5.29L2.59 1.05C2.49704 0.956274 2.38644 0.881879 2.26458 0.83111C2.14272 0.780342 2.01202 0.754204 1.88 0.754204C1.74799 0.754204 1.61729 0.780342 1.49543 0.83111C1.37357 0.881879 1.26297 0.956274 1.17 1.05C0.983753 1.23736 0.879211 1.49082 0.879211 1.755C0.879211 2.01919 0.983753 2.27264 1.17 2.46L4.71 6L1.17 9.54C0.983753 9.72736 0.879211 9.98082 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26344 11.0427 1.37426 11.116 1.4961 11.1658C1.61794 11.2155 1.7484 11.2408 1.88 11.24C2.01161 11.2408 2.14207 11.2155 2.26391 11.1658C2.38575 11.116 2.49656 11.0427 2.59 10.95L6.83 6.71C6.92373 6.61704 6.99813 6.50644 7.04889 6.38458C7.09966 6.26272 7.1258 6.13201 7.1258 6C7.1258 5.86799 7.09966 5.73728 7.04889 5.61543C6.99813 5.49357 6.92373 5.38297 6.83 5.29Z'
-                    fill='#FFF2EE' className='text-black'></path>
-                </svg>
+          <motion.a
+            href='/contact'
+            className='relative bg-yellow-400 group inline-block w-full sm:w-auto py-4 px-6 mb-24 text-white font-semibold rounded-md bg-orange-900 overflow-hidden'
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.3 }}>
+            <div className='relative flex items-center justify-center'>
+              <span className='p-4 border-spacing-8 border-4 text-black font-bold text-4xl'>
+                Contact Us
               </span>
+              <motion.span
+                animate={{ y: [0, -10, 0], rotate: [0, 20, 0] }}
+                transition={{ repeat: Infinity, duration: 0.8 }}
+                className='ml-4'>
+                <FiMail
+                  size={30}
+                  color='#FFF2EE'
+                />
+              </motion.span>
             </div>
-          </Link>
+          </motion.a>
         </div>
         <div class='lg:flex'>
           <div class='max-w-2xl mb-20 lg:mb-0 lg:mr-32'>
@@ -179,7 +173,7 @@ function Featured2() {
                 <h3
                   id='animateup'
                   class='text-3xl font-semibold text-yellow'>
-                  <span>Design</span>{' '}<span>Build</span>{' '}<span>Move</span>
+                  <span>Design</span> <span>Build</span> <span>Move</span>
                 </h3>
               </div>
               <div class='xs:w-100 max-w-md mt-10 px-5 xs:px-10 pb-12 pt-18 bg-orange-50 rounded-b-3xl'>
@@ -190,18 +184,14 @@ function Featured2() {
                     <span class='text-3xl xs:text-5xl font-semibold text-white'>
                       {projects && projects.docs.length}+
                     </span>
-                    <span class='block text-sm text-white'>
-                      Projects Done
-                    </span>
+                    <span class='block text-sm text-white'>Projects Done</span>
                   </div>
                   <div class='h-12 w-px mx-auto bg-orange-200'></div>
                   <div>
                     <span class='text-3xl xs:text-5xl font-semibold text-white'>
                       {photos && photos.totalDocs}+
                     </span>
-                    <span class='block text-sm text-white'>
-                      Photos
-                    </span>
+                    <span class='block text-sm text-white'>Photos</span>
                   </div>
                 </div>
               </div>
