@@ -57,14 +57,7 @@ function Featured2() {
   return (
     <section
       class='relative bg-fill pb-20 overflow-hidden'
-      ref={scope}
-      style={{
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundImage: `url(${data && data.image.url})`,
-        height: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-      }}>
+      ref={scope}>
       <div
         className='absolute inset-0 opacity-60'
         style={{
