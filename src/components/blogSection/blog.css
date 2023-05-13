@@ -1,0 +1,35 @@
+button.slick-next::before,
+button.slick-arrow.slick-prev::before{
+display: none;
+   
+
+}
+
+
+/* .previous{
+    left:-7%;bottom:48%;
+
+} */
+/* @media screen and (max-width:1100px) and (min-width:700px) {
+    .Next{
+        right:-9%;
+
+    }
+    
+    .previous{
+        left:-9%;
+
+    }
+}
+@media screen and (max-width:700px) {
+    .Next{
+        right:-10%;
+
+    }
+    
+    .previous{
+        left:-10%;
+
+    }
+} */
+

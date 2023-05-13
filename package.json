@@ -1,0 +1,74 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://olestonesbuilders.co.ke",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.3.5",
+    "chroma-js": "^2.4.2",
+    "escape-html": "^1.0.3",
+    "framer-motion": "^10.12.4",
+    "hamburger-react": "^2.5.0",
+    "react": "^18.2.0",
+    "react-auth-kit": "^2.12.2",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.3.0",
+    "react-hook-form": "^7.43.9",
+    "react-icons": "^4.8.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-intersection-observer": "^9.4.3",
+    "react-phone-number-input": "^3.2.19",
+    "react-responsive-masonry": "^2.1.7",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.2",
+    "react-share": "^4.4.1",
+    "react-slick": "^0.29.0",
+    "slate": "^0.94.0",
+    "slate-hyperscript": "^0.77.0",
+    "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.6.1",
+    "swr": "^2.1.3",
+    "tailwindcss-animatecss": "^3.0.2",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.7"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react-swc": "^3.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.2",
+    "tailwindcss-animated": "^1.0.0",
+    "vite": "^4.2.0"
+  }
+}

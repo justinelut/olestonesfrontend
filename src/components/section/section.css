@@ -1,0 +1,39 @@
+/* 
+img.width-Height{
+    width: 70%;
+    height: 500px;
+}
+button.width{
+    width: 100%;
+    height: 56px;
+}
+.new{
+    width: 40% ;
+}
+@media  screen and (min-width:768px) {
+    .new{
+        padding-left: 10%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    div.new{
+width: 50%;
+    }
+  
+}
+.m{
+    margin-bottom: 1000px ;
+}
+@media (max-width: 767px){
+    img.width-Height{
+        margin-top: 0;
+        width: 100%;
+    }
+    button.width{
+        width: 100%;
+    }
+    .new{
+        width: 70%;
+        left: 15%;
+    }
+    } */
