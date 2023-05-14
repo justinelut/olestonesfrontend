@@ -59,7 +59,7 @@ function Faqs() {
               <span class='font-serif italic text-6xl text-white'>answer</span>
             </h1>
           </div>
-          <div class='pt-10 sm:pt-24 px-8 sm:px-20 pb-18 bg-slate-800 rounded-4xl shadow-lg'>
+          <div class='pt-10 sm:pt-24 px-8 sm:px-20 pb-18 bg-black rounded-4xl shadow-lg'>
             {data &&
               data.docs.slice(0, 1).map((faq, index) => (
                 <button

@@ -2,6 +2,7 @@ import React from 'react';
 import aboutusimage from './aboutus.png';
 import { fetcher } from '../api/api_utils';
 import useSWR from 'swr';
+import { Link } from 'react-router-dom';
 
 function Aboutus() {
   const { data } = useSWR(`/api/services`, fetcher);
@@ -33,9 +34,16 @@ function Aboutus() {
                         />
                       </div>
                       <div>
-                        <h3 class='text-2xl text-gray-800 font-semibold'>{service.title}</h3>
+                        <h3 class='text-2xl text-gray-800 font-semibold'>
+                          {service.title}
+                        </h3>
                         <span class='text-lg text-slate-800'>
-                          {service.description}
+                          {service.description.slice(0, 100) + ' ... '}
+                          <Link
+                            className='text-sky-800 font-bold'
+                            to={`/services/${service.slug}`}>
+                            Learn More
+                          </Link>
                         </span>
                       </div>
                     </div>
@@ -51,7 +59,7 @@ function Aboutus() {
               <div class='mx-auto max-w-sm'>
                 {data &&
                   data.docs.slice(3, 6).map((service, index) => (
-                    <div class='flex items-center pb-12 mb-12 border-b-2 border-white'>
+                    <div key={index} class='flex items-center pb-12 mb-12 border-b-2 border-white'>
                       <div class='flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center bg-yellow-200 rounded-full'>
                         <img
                           src='saturn-assets/images/features/icon-cam.svg'
@@ -59,9 +67,16 @@ function Aboutus() {
                         />
                       </div>
                       <div>
-                        <h3 class='text-2xl text-gray-800 font-semibold'>{service.title}</h3>
+                        <h3 class='text-2xl text-gray-800 font-semibold'>
+                          {service.title}
+                        </h3>
                         <span class='text-lg text-slate-900'>
-                          {service.description}
+                          {service.description.slice(0, 100) + ' ... '}
+                          <Link
+                            className='text-sky-800 font-bold'
+                            to={`/services/${service.slug}`}>
+                            Learn More
+                          </Link>
                         </span>
                       </div>
                     </div>

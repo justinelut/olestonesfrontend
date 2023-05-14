@@ -112,7 +112,7 @@ const SingleBlogPost = () => {
               <p className='text-gray-700 py-3'>
                 {data && data.docs[0].createdBy.aboutme}
               </p>
-              <button className='px-2 py-1 text-gray-100 bg-green-700 flex w-full items-center justify-center rounded'>
+              <button className='px-2 py-1 text-white bg-fill flex w-full items-center justify-center rounded'>
                 Follow
                 <i className='bx bx-user-plus ml-2'></i>
               </button>

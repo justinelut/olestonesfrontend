@@ -19,53 +19,28 @@ function Projectssection() {
             {data &&
               data.docs.map((project) => (
                 <div class='w-full md:w-1/3 p-3.5'>
-                  <a
-                    href='/'
+                  {project && console.log(project)}
+                  <Link
+                    to={`/projects/${project.slug}`}
                     aria-label='View Item'>
                     <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
                       <img
                         className='object-cover w-full h-56 md:h-64 xl:h-80'
-                        src={project.image[0].image.url}
+                        src={project.descriptor[0].image.url}
                         alt=''
                       />
-                      <div className='absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
-                        {/* <p className='mb-4 text-lg font-bold text-gray-100'>
-                          {project.title}
-                        </p> */}
-                        <p className='text-sm tracking-wide text-gray-300'>
-                          {project.description}
-                        </p>
-                      </div>
+                      
                       <div className='absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75'>
                         <p className='text-sm font-medium tracking-wide text-white'>
                           {project.title}
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               ))}
           </div>
-          {/* <Link
-            class='flex justify-center items-center text-center font-semibold text-indigo-600 hover:text-indigo-700 leading-normal'
-            to='/projects'>
-            <span class='mr-2.5'>
-              See all {data && data.docs.length} projects
-            </span>
-            <svg
-              width='17'
-              height='16'
-              viewbox='0 0 17 16'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M9.83333 3.33337L14.5 8.00004M14.5 8.00004L9.83333 12.6667M14.5 8.00004L2.5 8.00004'
-                stroke='currentColor'
-                stroke-width='1.5'
-                stroke-linecap='round'
-                stroke-linejoin='round'></path>
-            </svg>
-          </Link> */}
+         
         </div>
       </div>
     </section>

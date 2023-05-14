@@ -14,7 +14,7 @@ const About = () => {
       <Section data={data} />
       <Do />
       <Team />
-      <Another />
+      {/* <Another /> */}
       {/* <Interior /> */}
       {/* <div
         className='bg-contain bg-no-repeat bg-center'

@@ -1,30 +1,36 @@
-
-/*    
-
-@media screen and (min-width:1024px)  {
-    .box{
-        width:50%;
-     
-        min-height: 60%;
-   bottom: 15%;
-
-    }
-    .container{
-        height: 70%;
-    } 
-  
-
-   
+#gallery {
+    --webkit--column-count: 3;
+    --moz-column-count: 3;
+    column-count: 3;
+    --webkit--column-width: 33%;
+    --moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 12px;
 }
-@media screen and  (max-width:1024px){
-     
-    #projectsSection{
-    position: absolute;
-    top: -7%;
+
+#gallery #photos {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 991px) {
+    #gallery {
+        --webkit--column-count: 2;
+        --moz-column-count: 2;
+        column-count: 2;
     }
-    
-} */
+}
 
+@media (max-width: 480px) {
+    #gallery {
+        --webkit--column-count: 1;
+        --moz-column-count: 1;
+        column-count: 1;
+        --webkit--column-width: 100%;
+        --moz-column-width: 100%;
+        column-width: 100%;
 
-
-
+    }
+}

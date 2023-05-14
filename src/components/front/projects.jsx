@@ -47,21 +47,15 @@ function Projects() {
               data.docs.slice(0, 5).map((project) => (
                 <div class='w-full md:w-1/3 p-3.5'>
                   <Link
-                    to='/'
+                    to={`/projects/${project.slug}`}
                     aria-label='View Item'>
                     <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
                       <img
                         className='object-cover w-full h-56 md:h-64 xl:h-80'
-                        src={project.image[0].image.url}
+                        src={project.descriptor[0].image.url}
                         alt=''
                       />
                       <div className='absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
-                        {/* <p className='mb-4 text-lg font-bold text-gray-100'>
-                          {project.title}
-                        </p> */}
-                        <p className='text-sm tracking-wide text-gray-300'>
-                          {project.description}
-                        </p>
                       </div>
                       <div className='absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75'>
                         <p className='text-sm font-medium tracking-wide text-white'>

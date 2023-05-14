@@ -58,28 +58,19 @@ function Featured2() {
 
   return (
     <section
-      class='relative bg-fill pb-20 overflow-hidden'
-      ref={scope}
-      style={{
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundImage: `url(${data && data.image.url})`,
-        height: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-      }}>
+      class='relative bg-slate-400 pb-20 overflow-hidden'
+      ref={scope}>
       <div
-        className='absolute inset-0 opacity-60'
+        className='absolute inset-0 opacity-20'
         style={{
-          background:
-            'linear-gradient(to left, #f6e05e, rgba(255,255,255,1) 100%, rgba(255, 255, 255, 1))',
+          opacity: '20%'
         }}
       />
       <img
         src={data && data.image.url}
-        className='absolute inset-0 opacity-60 w-full h-full'
+        className='absolute inset-0 opacity-20 w-full h-full'
         style={{
-          background:
-            'linear-gradient(to left, #f6e05e, rgba(255,255,255,1) 60%, rgba(255, 255, 255, 1))',
+         opacity: '20%'
         }}
         alt=''
       />
@@ -89,7 +80,7 @@ function Featured2() {
       </nav>
       <div class='relative container px-4 mx-auto'>
         <div class='max-w-xl xl:max-w-4xl'>
-          <h1 class='font-heading text-6xl xs:text-6xl md:text-8xl xl:text-10xl font-bold text-gray-900 mb-8 sm:mb-14'>
+          <h1 class='font-heading text-6xl xs:text-6xl md:text-8xl xl:text-10xl font-bold text-white mb-8 sm:mb-14'>
             <span>{data && data.title1}</span>
             {/* <span class='font-serif italic'>Ever</span> */}
           </h1>
@@ -107,7 +98,7 @@ function Featured2() {
               </svg>
             </div>
             <div class='max-w-md'>
-              <p class='md:text-xl text-yellowbg font-semibold'>
+              <p class='md:text-xl text-black font-semibold'>
                 {data && data.title2}
               </p>
             </div>
@@ -135,9 +126,9 @@ function Featured2() {
         </div>
         <div class='lg:flex'>
           <div class='max-w-2xl mb-20 lg:mb-0 lg:mr-32'>
-            <span class='block mb-6 text-sm font-semibold text-white'>
+            {/* <span class='block mb-6 text-sm font-semibold text-white'>
               YOUR TRUSTED BUILDING PARTNER
-            </span>
+            </span> */}
             <div class='flex items-center -mx-4'>
               <div class='w-1/3 px-4'>
                 <img
@@ -173,7 +164,7 @@ function Featured2() {
                 <h3
                   id='animateup'
                   class='text-3xl font-semibold text-yellow'>
-                  <span>Design</span> <span>Build</span> <span>Move</span>
+                  {/* <span>Design</span> <span>Build</span> <span>Move</span> */}
                 </h3>
               </div>
               <div class='xs:w-100 max-w-md mt-10 px-5 xs:px-10 pb-12 pt-18 bg-orange-50 rounded-b-3xl'>

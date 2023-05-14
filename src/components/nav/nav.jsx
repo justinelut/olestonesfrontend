@@ -68,6 +68,9 @@ const Nav = () => {
                   <Link to='/services'>Services</Link>
                 </li>
                 <li className='text-charcoal font-medium text-sm tracking-wider transition border-[#eab308]  hover:border-b hover:scale-110 duration-150'>
+                  <Link to='/projects'>Projects</Link>
+                </li>
+                <li className='text-charcoal font-medium text-sm tracking-wider transition border-[#eab308]  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/blog'>Blog</Link>
                 </li>
                 <li className='text-charcoal font-medium text-sm tracking-wider transition border-[#eab308]  hover:border-b hover:scale-110 duration-150'>
