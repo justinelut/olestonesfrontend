@@ -27,6 +27,7 @@
     "react-select": "^5.7.2",
     "react-share": "^4.4.1",
     "react-slick": "^0.29.0",
+    "react-whatsapp-widget": "^2.2.0",
     "slate": "^0.94.0",
     "slate-hyperscript": "^0.77.0",
     "slick-carousel": "^1.8.1",

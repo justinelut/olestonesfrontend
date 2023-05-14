@@ -21,6 +21,7 @@ import SingleBlogPost from './components/blog/post';
 import Studio from './components/studio/studio';
 import OrderSuccess from './components/purchase/ordersuccess';
 import { HelmetProvider } from 'react-helmet-async';
+import ProjectDescription from './components/projects/ProjectDescription';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -95,6 +96,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <>
                   <Nav />
                   <Projects />
+                </>
+              }
+            />
+            <Route
+              exact
+              path='/projects/:slug'
+              element={
+                <>
+                  <Nav />
+                  <ProjectDescription />
                 </>
               }
             />

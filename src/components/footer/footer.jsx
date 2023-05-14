@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import useSWR from 'swr';
 import { fetcher } from '../api/api_utils';
 import { Helmet } from 'react-helmet-async';
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+import 'react-whatsapp-widget/dist/index.css';
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -81,6 +83,7 @@ export default function Footer() {
 
         <title>{data && data.name}</title>
       </Helmet> */}
+
       <div className='flex bg-gray-900 p-4'>
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
           <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
