@@ -125,24 +125,6 @@ export default function Footer() {
                 ))}
             </div>
           </div>
-          <div className='bg-gray-900 py-4'>
-            <div className='container mx-auto px-4'>
-              <div className='flex flex-wrap -mx-4'>
-                <div className='w-full md:w-1/3 px-4 mb-4'>
-                  <h3 className='text-xl text-white font-bold mb-2'>Phone</h3>
-                  <p className='text-white'>+254 707 782830</p>
-                </div>
-                <div className='w-full md:w-1/3 px-4 mb-4'>
-                  <h3 className='text-xl text-white font-bold mb-2'>Email</h3>
-                  <p className='text-white'>info@olestonesbuilders.co.ke</p>
-                </div>
-                <div className='w-full md:w-1/3 px-4 mb-4'>
-                  <h3 className='text-xl text-white font-bold mb-2'>Address</h3>
-                  <p className='text-white'>Nairobi, Kenya</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className='flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row bg-gray-900 opacity-60'>
             <p className='text-lg text-text text-white'>
               © Copyright {new Date().getFullYear()} {data && data.name}. All
@@ -159,6 +141,24 @@ export default function Footer() {
               <FacebookShareButton url={'https://olestonesbuilders.co.ke'}>
                 <FacebookIcon size={32} />
               </FacebookShareButton>
+            </div>
+          </div>
+          <div className='bg-gray-900 py-4'>
+            <div className='container mx-auto px-4'>
+              <div className='flex flex-wrap -mx-4'>
+                <div className='w-full md:w-1/3 px-4 mb-4'>
+                  <h3 className='text-xl text-white font-bold mb-2'>Phone</h3>
+                  <p className='text-white'>+254 707 782830</p>
+                </div>
+                <div className='w-full md:w-1/3 px-4 mb-4'>
+                  <h3 className='text-xl text-white font-bold mb-2'>Email</h3>
+                  <p className='text-white'>info@olestonesbuilders.co.ke</p>
+                </div>
+                <div className='w-full md:w-1/3 px-4 mb-4'>
+                  <h3 className='text-xl text-white font-bold mb-2'>Address</h3>
+                  <p className='text-white'>Nakuru Kenya</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
