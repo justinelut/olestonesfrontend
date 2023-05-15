@@ -91,7 +91,7 @@ export default function Footer() {
           companyName='Olestone Builders'
           replyTimeText='Typically replies within no time'
           message="Welcome to Olestones Builders, Tell us what you would like us to do for you"
-          phoneNumber='+254740455200'
+          phoneNumber='+254707782830'
         />
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
           <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
