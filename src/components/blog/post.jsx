@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { fetcher } from '../api/api_utils';
 import useSWR from 'swr';
 import FormatDay from '../utils/dateformater';
@@ -9,26 +9,30 @@ const SingleBlogPost = () => {
   const { slug } = useParams();
   const { data } = useSWR(`/api/posts?where[slug][equals]=${slug}`, fetcher);
   const tagColors = [
-    'bg-blue-200',
-    'bg-green-200',
+    'bg-slate-200',
+    'bg-gray-200',
     'bg-purple-200',
     'bg-yellow-200',
-    'bg-red-200',
+    'bg-red-300',
   ];
 
+   if (data && data.docs.length === 0) {
+     <Navigate to='/404' />;
+     return null;
+   }
  
 
   return (
-    <div className='max-w-screen-lg mx-auto'>
+    <div className='max-w-screen-lg mb-6 mx-auto'>
       <main className='mt-10'>
         <div className='mb-4 md:mb-0 w-full mx-auto relative'>
           <div className='px-4 lg:px-0'>
-            <h2 className='text-4xl font-semibold text-gray-800 leading-tight'>
+            <h2 className='text-4xl font-semibold text-black leading-tight'>
               {data && data.docs[0].title}
             </h2>
                 <a
                   href='/blog'
-                  className='py-2 text-green-700 inline-flex items-center justify-center mb-2'>
+                  className='py-2 text-slate-900 font-medium inline-flex items-center justify-center mb-2'>
                   { data && data.docs[0].category.name}
                 </a>
           </div>
@@ -49,7 +53,7 @@ const SingleBlogPost = () => {
             </div>
             <time
               datetime={FormatDay(data && data.docs[0].updatedAt)}
-              className='text-gray-500 dark:text-gray-400 text-base font-medium'>
+              className='text-gray-900 dark:text-gray-50 text-base font-medium'>
               {FormatDay(data && data.docs[0].updatedAt)}
             </time>
           </div>
@@ -62,7 +66,7 @@ const SingleBlogPost = () => {
         </div>
 
         <div className='flex flex-col lg:flex-row lg:space-x-12'>
-          <div className='px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4'>
+          <div className='px-4 lg:px-0 mt-12 text-black text-lg leading-relaxed w-full lg:w-3/4'>
             <div
               dangerouslySetInnerHTML={{
                 __html: data && serializeContent(data.docs[0].content).html,
@@ -79,7 +83,7 @@ const SingleBlogPost = () => {
                         className={`mr-2 mb-2 p-2 rounded-md ${
                           tagColors[index % tagColors.length]
                         }`}>
-                        <span className='text-sm font-medium text-gray-800'>
+                        <span className='text-sm font-medium text-gray-900'>
                           {tag.name}
                         </span>
                       </div>
@@ -109,7 +113,7 @@ const SingleBlogPost = () => {
                   </p>
                 </div>
               </div>
-              <p className='text-gray-700 py-3'>
+              <p className='text-gray-900 py-3'>
                 {data && data.docs[0].createdBy.aboutme}
               </p>
               <button className='px-2 py-1 text-white bg-fill flex w-full items-center justify-center rounded'>

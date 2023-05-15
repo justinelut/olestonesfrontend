@@ -50,11 +50,10 @@ const Reviews = () => {
   };
   return (
     <div className='flex items-center p-10 flex-col  gap-10 relative overflow-hidden bg-fill'>
-      <h1 class='font-heading text-8xl xs:text-4xl md:text-8xl font-heading max-sm:text-6xl font-bold text-gray-700 px-4'>
-        <span className='text-white'>What </span>
-        <span class='font-serif italic'>Our</span>
-        <br></br>
-        <span className=''>clients say about us</span>
+      <h1 class='font-heading text-4xl xs:text-4xl md:text-5xl font-heading font-bold text-black px-4 py-8'>
+        <span class='text-white'>
+          What our clients say{' '}<span className='text-black'>About Us</span>
+        </span>
       </h1>
       <div className='w-[100%] sm:w-[90%] xl:w-full text-center '>
         <Slider

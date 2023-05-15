@@ -27,19 +27,18 @@ export const Gallery = () => {
   return (
     <div ref={scope} className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
       <div className='flex bg-fill-secondary flex-col mb-6 lg:justify-between lg:flex-row md:mb-8'>
-        <h2 className='max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl sm:leading-none md:mb-6 group'>
+        <h2 className='max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-black sm:text-4xl sm:leading-none md:mb-6 group'>
           <span className='inline-block mb-1 sm:mb-4'>
-            <h2 class='mb-5 text-6xl md:text-8xl text-gray-800 xl:text-8  text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+            <h2 class='mb-5 text-2xl md:text-6xl text-black xl:text-8  text-center font-bold font-heading font-heading tracking-px-n leading-none'>
               Photos
             </h2>
           </span>
           <div className='h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100' />
         </h2>
-        <p className='text-gray-800 text-lg lg:text-sm lg:max-w-md'>
+        <p className='text-black text-lg sm:text-lg max-md:bg-yellowbg lg:max-w-md p-4 font-medium'>
           We're constantly updating our gallery with new and exciting images
           showcasing our work, so be sure to check back often to discover what's
-          new. Thank you for visiting our website gallery, and we hope you enjoy
-          our experience with us.
+          new.
         </p>
       </div>
       <div className='grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2'>
@@ -69,11 +68,11 @@ export const Gallery = () => {
             </a>
           ))}
       </div>
-      <div className='text-center mt-10'>
+      <div className='text-center mt-10 flex'>
         <Link
           to='/gallery'
           aria-label=''
-          className='inline-flex items-center font-semibold p-4 transition-colors duration-200 text-yellow bg-gray-800  hover:fill-slate-700'>
+          className='mx-auto inline-flex items-center font-semibold p-4 transition-colors duration-200 text-yellowbg bg-black  hover:fill-slate-700'>
           View all {data && data.totalDocs} Photos
           <svg
             className='inline-block w-3 ml-2'

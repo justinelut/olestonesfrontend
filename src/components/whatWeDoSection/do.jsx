@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 function Aboutus() {
   const { data } = useSWR(`/api/services`, fetcher);
   return (
-    <section class='relative bg-fill py-20 overflow-hidden'>
+    <section class='relative bg-fill py-10 overflow-hidden'>
       <div class='container px-4 mx-auto'>
         <div class='max-w-3xl mx-auto text-center'>
-          <span class='inline-block py-1 px-3 mb-4 text-xs font-semibold  rounded-full'>
+          {/* <span class='inline-block py-1 px-3 mb-4 text-xs font-semibold  rounded-full'>
             About us
-          </span>
-          <h1 class='font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-gray-900 mb-24'>
-            <span>What We do at </span>
-            <span class='font-serif italic'>Ole Stones</span>
+          </span> */}
+          <h1 class='font-heading text-2xl xs:text-6xl md:text-6xl font-bold text-gray-900 mb-10'>
+            <span className='text-white'>What We do at </span>
+            <span class='font-serif text-black'>Ole Stones</span>
           </h1>
         </div>
         <div class='max-w-7xl mx-auto'>
@@ -34,13 +34,13 @@ function Aboutus() {
                         />
                       </div>
                       <div>
-                        <h3 class='text-2xl text-gray-800 font-semibold'>
+                        <h3 class='text-xl text-black font-semibold'>
                           {service.title}
                         </h3>
-                        <span class='text-lg text-slate-800'>
+                        <span class='text-base font-medium text-black'>
                           {service.description.slice(0, 100) + ' ... '}
                           <Link
-                            className='text-sky-800 font-bold'
+                            className='text-white font-bold'
                             to={`/services/${service.slug}`}>
                             Learn More
                           </Link>
@@ -60,20 +60,20 @@ function Aboutus() {
                 {data &&
                   data.docs.slice(3, 6).map((service, index) => (
                     <div key={index} class='flex items-center pb-12 mb-12 border-b-2 border-white'>
-                      <div class='flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center bg-yellow-200 rounded-full'>
+                      <div class='flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center bg-yellowbg rounded-full'>
                         <img
                           src='saturn-assets/images/features/icon-cam.svg'
                           alt=''
                         />
                       </div>
                       <div>
-                        <h3 class='text-2xl text-gray-800 font-semibold'>
+                        <h3 class='text-xl text-black font-semibold'>
                           {service.title}
                         </h3>
-                        <span class='text-lg text-slate-900'>
+                        <span class='text-base font-medium text-black'>
                           {service.description.slice(0, 100) + ' ... '}
                           <Link
-                            className='text-sky-800 font-bold'
+                            className='text-white font-semibold'
                             to={`/services/${service.slug}`}>
                             Learn More
                           </Link>

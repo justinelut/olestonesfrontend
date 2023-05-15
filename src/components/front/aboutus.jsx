@@ -4,6 +4,7 @@ import { fetcher } from '../api/api_utils';
 import useSWR from 'swr';
 import { useAnimate, useInView, usePresence, stagger } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Aboutus() {
   const { data } = useSWR(`/api/services`, fetcher);
@@ -11,33 +12,64 @@ function Aboutus() {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 
+  const [isExpanded, setIsExpanded] = useState(false);
 
-   useEffect(() => {
-     if (isInView && isPresent) {
-       const enterAnimation = async () => {
-         await animate(
-           'span',
-           { opacity: [0, 1], x: [-100, 0] },
-           { duration: 0.5, delay: stagger(0.3), }
-         );
-       };
-       enterAnimation();
-     }
-   });
+  const handleToggleText = () => {
+    setIsExpanded(!isExpanded);
+  };
 
+  const textContent = `We're a Team of fully-certified Professional Builders & Movers, Who
+            Tackle everything from complex large projects to smaller-scale jobs.
+            Fueled by our commitment to excellence, we go the extra mile to make
+            sure clients are completely satisfied with our work. We are
+            committed to providing our Customers with exceptional services while
+            offering our employees the best training and an excellent working
+            environment in which they can excel. 'Ole Stones Builders &
+            Logistics' commits itself to quality and excellence in terms of its
+            workmanship and performance.`;
+
+  useEffect(() => {
+    if (isInView && isPresent) {
+      const enterAnimation = async () => {
+        await animate(
+          'span',
+          { opacity: [0, 1], x: [-100, 0] },
+          { duration: 0.5, delay: stagger(0.3) }
+        );
+      };
+      enterAnimation();
+    }
+  });
 
   return (
     <>
       <div className='bg-black py-8'>
         <div class='max-w-2xl mx-auto mb-8 text-center'>
           <h1 class='font-heading text-2xl xs:text-6xl md:text-6xl font-semibold text-yellowbg mb-4'>
-              Who Are We?
+            Who We <span className='text-white'>Are?</span>
           </h1>
-          <p class='text-lg text-white p-6'>
-            We're a Team of fully-certified Professional Builders & Movers, Who
-            Tackle everything from complex large projects to smaller-scale jobs.
-            
-          </p>
+          <div className='p-5'>
+            {isExpanded ? (
+              <div>
+                <p className='text-white'>{textContent}</p>
+                <button
+                  className='text-yellowbg hover:text-white m-2 p-2 border border-yellowbg rounded'
+                  onClick={handleToggleText}>
+                  Read Less
+                </button>
+              </div>
+              
+            ) : (
+              <div>
+                <p className='line-clamp-3 text-white'>{textContent}</p>
+                <button
+                  className='text-white hover:text-yellowbg m-2 p-2 border border-yellowbg rounded'
+                  onClick={handleToggleText}>
+                  Read More
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <section
@@ -69,10 +101,10 @@ function Aboutus() {
                           <h3 class='text-3xl font-bold text-gray-900'>
                             {service.title}
                           </h3>
-                          <span class='text-base text-gray-900'>
+                          <span class='text-base font-medium text-gray-900'>
                             {service.description.slice(0, 100) + ' ... '}
                             <Link
-                              className='text-sky-800 font-bold'
+                              className='text-white font-bold'
                               to={`/services/${service.slug}`}>
                               Learn More
                             </Link>
@@ -104,10 +136,10 @@ function Aboutus() {
                           <h3 class='text-3xl font-bold text-gray-900'>
                             {service.title}
                           </h3>
-                          <span class='text-base text-gray-900'>
+                          <span class='text-base font-medium text-gray-900'>
                             {service.description.slice(0, 100) + ' ... '}
                             <Link
-                              className='text-sky-800 font-bold'
+                              className='text-white font-bold'
                               to={`/services/${service.slug}`}>
                               Learn More
                             </Link>

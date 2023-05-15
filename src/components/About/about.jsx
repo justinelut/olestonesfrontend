@@ -12,8 +12,9 @@ const About = () => {
   return (
     <>
       <Section data={data} />
-      <Do />
       <Team />
+      <Do />
+    
       {/* <Another /> */}
       {/* <Interior /> */}
       {/* <div

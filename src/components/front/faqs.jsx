@@ -37,7 +37,7 @@ function Faqs() {
   return (
     <section
       ref={scope}
-      class='relative bg-gray-700 py-20 overflow-hidden'>
+      class='relative bg-black py-20 overflow-hidden'>
       <img
         class='absolute top-0 left-0 mt-44'
         src='saturn-assets/images/faq/light-blue-left.png'
@@ -51,12 +51,12 @@ function Faqs() {
       <div class='relative container px-4 mx-auto'>
         <div class='max-w-5xl mx-auto'>
           <div class='text-center'>
-            <span class='inline-block py-1 px-3 mb-4 text-xs font-semibold text-yellow bg-orange-50 rounded-full'>
+            <span class='inline-block py-1 px-3 mb-4 text-lg font-semibold text-white bg-orange-50 rounded-full'>
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h1 class='font-heading text-8xl xs:text-4xl md:text-8xl font-semibold text-gray-700'>
-              <span className='text-yellowbg'> You ask, We </span>
-              <span class='font-serif italic text-6xl text-white'>answer</span>
+            <h1 class='font-heading text-2xl xs:text-4xl md:text-6xl font-semibold text-black mb-8'>
+              <span className='text-yellowbg'> You ask, {' '}</span>
+              <span class='font-serif text-white'>we answer</span>
             </h1>
           </div>
           <div class='pt-10 sm:pt-24 px-8 sm:px-20 pb-18 bg-black rounded-4xl shadow-lg'>

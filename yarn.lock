@@ -8701,6 +8701,11 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-whatsapp-chat-widget@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/react-whatsapp-chat-widget/-/react-whatsapp-chat-widget-1.1.6.tgz#7d6c26fe4efbedb2705f93645a5a9047f259dfab"
+  integrity sha512-rmUBtXpTapr0wFlEAQxwnHsPwdTNQCkUpSt2vpMF5l2Q1ApMV0OIOeNiWv2kktcRfEUNb2kgKau4rHfnrJyW4w==
+
 react-whatsapp-widget@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-whatsapp-widget/-/react-whatsapp-widget-2.2.0.tgz#1fdb927538aa433acff34bbc87eaa2d2ff0963b6"
@@ -8710,6 +8715,11 @@ react-whatsapp-widget@^2.2.0:
     postcss-normalize "^10.0.1"
     postcss-preset-env "^8.0.1"
     react-icons "^4.4.0"
+
+react-whatsapp@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-whatsapp/-/react-whatsapp-0.3.0.tgz#1d8909939112b90411a70189be2677bdb6d53ac6"
+  integrity sha512-ZuCKhd30crVVNdLf/3BfDffqEOZLFW6mYRITA4fB6Vk5p3TU1Gl3YfTEfLE/7W+kTuwYPzF6aDnzbNt6GcatiQ==
 
 "react@>=16.8.0 || ^17.x || ^18.x", react@^18.2.0:
   version "18.2.0"

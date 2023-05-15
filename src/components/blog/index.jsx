@@ -7,9 +7,11 @@ export default function Blog(){
   const {data} = useSWR(`/api/posts`, fetcher)
   
     return (
-      <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-          <h3 className='text-center mt-5 mb-10 text-4xl text-semibold text-gray-900'>Welcome to Our Blog Page</h3>
-        <div className='grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full'>
+      <div className='px-4 py-16 bg-fill lg:py-20'>
+        <h3 className='text-center text-6xl mt-5 mb-10 font-semibold text-black'>
+          Blogs
+        </h3>
+        <div className='grid px-2 md:px-10 lg:px-10 gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full'>
           {data &&
             data.docs.map((post) => (
               <Link to={post.slug}>
@@ -23,19 +25,19 @@ export default function Blog(){
                       alt=''
                     />
                   </a>
-                  <div className='py-5 px-5'>
-                    <p className='mb-2 text-xs font-semibold text-gray-600 uppercase'>
+                  <div className='py-5 px-5 bg-black'>
+                    <p className='mb-2 text-xs  text-yellowbg uppercase'>
                       {FormatDay(post.updatedAt)}
                     </p>
                     <a
                       href='/'
                       aria-label='Article'
-                      className='inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700'>
-                      <p className='text-2xl font-bold leading-5'>
+                      className='max-w-sm inline-block mb-3 text-white transition-colors duration-200 hover:text-deep-purple-accent-700'>
+                      <p className='text-2xl text-white font-semibold'>
                         {post.title}
                       </p>
                     </a>
-                    <p className='mb-4 text-gray-700'>{post.summary}</p>
+                    <p className='mb-4 text-white'>{post.summary}</p>
                   </div>
                 </div>
               </Link>

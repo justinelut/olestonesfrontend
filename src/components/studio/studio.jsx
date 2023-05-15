@@ -57,12 +57,12 @@ const Studio = () => {
 
 
   return (
-    <section ref={scope} class='py-24 bg-gray-800 bg-blueGray-50 overflow-hidden'>
+    <section ref={scope} class='py-8 bg-yellowbg overflow-hidden'>
       <div class='container px-4 mx-auto'>
-        <h2 class='mb-5 text-8xl md:text-8xl text-yellow xl:text-8xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+        <h2 class='mb-5 text-2xl md:text-4xl text-black xl:text-6xl text-center font-bold font-heading tracking-px-n leading-none'>
           Gallery
         </h2>
-        <p class='mb-16 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
+        <p class='mb-10 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
           Welcome to our gallery where we showcase our skills, experience and everything else related to our projects. 
         </p>
         <div class='md:max-w-6xl mx-auto'>
@@ -84,8 +84,8 @@ const Studio = () => {
           {images && hasNextPage ? (
             <button
               onClick={fetchMoreData}
-              style={{ width: '200px', height: '60px' }}
-              className='animate-pulse tracking-wide text-center rounded-md border-2 border-yellowbg px-8 mx-2 py-2 text-lg font-medium text-yellow transition hover:bg-gray-800 hover:text-white focus:outline-none focus:ring'>
+              style={{ width: '200px', height: '60px',margin: 'auto' }}
+              className='animate-pulse tracking-wide text-center rounded-md border-2 border-white px-8 mx-2 py-2 text-lg font-medium text-gray-50 transition hover:bg-gray-800 hover:text-white focus:outline-none focus:ring'>
               Load More
             </button>
           ) : (

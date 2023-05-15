@@ -5,7 +5,7 @@ function quotation() {
   return (
     <>
       <div>
-        <div className='relative overflow-hidden rounded-lg shadow-lg bg-slate-900 opacity-30'>
+        <div className='relative overflow-hidden rounded-lg shadow-lg bg-black opacity-30'>
           <img
             className='object-cover w-full h-60'
             src={quotationbg}

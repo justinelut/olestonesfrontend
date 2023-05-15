@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 function Projectssection() {
   const { data } = useSWR(`/api/projects`, fetcher);
   return (
-    <section class='py-14 overflow-hidden bg-slate-800'>
+    <section class='py-14 overflow-hidden bg-black'>
       <div class='container mx-auto'>
         <h2 class='mb-5 text-xl md:text-2xl text-white xl:text-4xl text-center font-semibold font-heading font-heading tracking-px-n leading-none'>
-          Our Projects
+          Our <span className='text-yellowbg'>Projects</span>
         </h2>
         <p class='mb-16 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
           Explore our projects that we have done over the years

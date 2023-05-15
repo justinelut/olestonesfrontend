@@ -16,6 +16,7 @@ const Form = () => {
   const onSubmit = async (data) => {
     const results = await sender('/api/contact', {
       name: data.name,
+      phonenumber: data.phone,
       email: data.email,
       message: data.message,
     });
@@ -33,8 +34,8 @@ const Form = () => {
 
   return (
     <div className='flex py-10 items-center flex-col bg-fill'>
-      <h1 class='mb-5 py-10 text-6xl md:text-4xl text-gray-700 xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
-        Give Us A Shout!
+      <h1 class='mb-5 py-10 text-6xl md:text-4xl text-black xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+        Give Us A <span className='text-white'>Shout!</span>
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -57,6 +58,25 @@ const Form = () => {
             Name must be at least 2 characters
           </span>
         )}
+        <input
+          type='tel'
+          name='phone'
+          className='border-b-[2px] text-lg focus:outline-1 p-4 rounded max-md:w-2/3 md:w-2/4 bg-white text-gray-900'
+          placeholder='Phone Number'
+          {...register('phone', {
+            required: true,
+            pattern: /^[0-9]{10}$/,
+          })}
+        />
+        {errors.phone?.type === 'required' && (
+          <span className='text-red-500'>This field is required</span>
+        )}
+        {errors.phone?.type === 'pattern' && (
+          <span className='text-red-500'>
+            Please enter a valid 10-digit phone number
+          </span>
+        )}
+
         <input
           type='email'
           name='email'
@@ -93,8 +113,8 @@ const Form = () => {
         {succMessage && <Success message={succMessage} />}
         <button
           // style={{ width: '150px', height: '60px' }}
-          className='mx-2 text-3xl font-bold outline-4 bg-inherit text-white border-4 border-white p-4'>
-          REQUEST FOR A QU0TATION
+          className='mx-2 text-2xl font-semibold outline-4 bg-inherit text-white border-2 border-white p-4'>
+          REQUEST A QU0TATION
         </button>
       </form>
     </div>

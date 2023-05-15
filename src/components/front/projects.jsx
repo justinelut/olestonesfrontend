@@ -31,13 +31,13 @@ function Projects() {
   return (
     <section
       ref={scope}
-      class='py-24 bg-gray-700  overflow-hidden'>
+      class='py-24 bg-black  overflow-hidden'>
       <div class='container px-4 mx-auto'>
         <div class='max-w-3xl mx-auto text-center'>
-          <h2 class='mb-5 text-4xl md:text-6xl sm:text-4xl xs:text-4xl text-yellowbg xl:text-8xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
-            Our Projects
+          <h2 class='mb-5 text-2xl md:text-6xl sm:text-4xl xs:text-4xl text-white xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+            Our <span className='text-yellowbg'>Projects</span>
           </h2>
-          <p class='mb-16 text-lg sm:text-4xl xs:text-4xl text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
+          <p class='mb-16 text-xl sm:text-4xl xs:text-4xl text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
             Explore our projects that we have done over the years
           </p>
         </div>
@@ -55,8 +55,7 @@ function Projects() {
                         src={project.descriptor[0].image.url}
                         alt=''
                       />
-                      <div className='absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
-                      </div>
+                      <div className='absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'></div>
                       <div className='absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75'>
                         <p className='text-sm font-medium tracking-wide text-white'>
                           {project.title}
@@ -68,7 +67,7 @@ function Projects() {
               ))}
           </div>
           <Link
-            class='flex justify-center items-center text-center font-semibold text-yellow hover:text-indigo-700 leading-normal'
+            class='flex justify-center items-center text-center font-semibold text-yellowbg hover:text-white leading-normal'
             to='/projects'>
             <span class='mr-2.5'>
               See all {data && data.totalDocs} projects

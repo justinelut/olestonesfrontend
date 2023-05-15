@@ -5,6 +5,7 @@ import { fetcher } from '../api/api_utils';
 import { Helmet } from 'react-helmet-async';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
+
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -84,7 +85,14 @@ export default function Footer() {
         <title>{data && data.name}</title>
       </Helmet> */}
 
-      <div className='flex bg-gray-900 p-4'>
+      <div className='flex bg-black p-4'>
+        <WhatsAppWidget
+          className='ml-50'
+          companyName='Olestone Builders'
+          replyTimeText='Typically replies within no time'
+          message="Welcome to Olestones Builders, Tell us what you would like us to do for you"
+          phoneNumber='+254740455200'
+        />
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
           <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
             <div className='md:max-w-md lg:col-span-2'>
@@ -103,7 +111,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className='grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4'>
+            <div className='grid grid-cols-3 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4'>
               {footer &&
                 footer.links.map((title) => (
                   <div>
@@ -138,7 +146,7 @@ export default function Footer() {
                 </div>
                 <div className='w-full md:w-1/3 px-4 mb-4'>
                   <h3 className='text-xl text-white font-bold mb-2'>Address</h3>
-                  <p className='text-white'>Nakuru Kenya</p>
+                  <p className='text-white'>Nairobi, Kenya</p>
                 </div>
               </div>
             </div>

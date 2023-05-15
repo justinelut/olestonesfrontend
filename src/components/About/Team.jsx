@@ -6,15 +6,15 @@ function Team() {
   const { data } = useSWR('/api/olestonesTeam', fetcher);
  
   return (
-    <section class='relative py-20 md:py-32 overflow-hidden bg-slate-800'>
+    <section class='relative py-10 overflow-hidden bg-yellowbg'>
       <div class='container px-4 mx-auto'>
         <div class='max-w-7xl mx-auto'>
-          <div class='max-w-2xl mx-auto mb-18 text-center'>
-            <h1 class='font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-white mb-8'>
-              <span>Amazing </span>
-              <span class='font-serif italic'>Team</span>
+          <div class='max-w-2xl mx-auto mb-8 text-center'>
+            <h1 class='font-heading text-2xl xs:text-6xl md:text-6xl font-bold text-white mb-8'>
+              <span className='text-white'>About</span>{' '}
+              <span class='font-serif text-black'>Us</span>
             </h1>
-            <p class='text-lg text-yellowbg'>
+            <p class='text-lg text-black font-medium text-left'>
               We're a Team of fully-certified Professional Builders & Movers,
               Who Tackle everything from complex large projects to smaller-scale
               jobs. Fueled by our commitment to excellence, we go the extra mile
@@ -27,7 +27,7 @@ function Team() {
             </p>
           </div>
 
-          {data &&
+          {/* {data &&
             data.docs.map((team, index) => (
               <div
                 key={index}
@@ -49,7 +49,7 @@ function Team() {
                   </div>
                 </div>
               </div>
-            ))}
+            ))} */}
         </div>
       </div>
     </section>

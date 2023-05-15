@@ -47,7 +47,7 @@ const Projects = () => {
 
         <Link
           to='/projects'
-          className='self-center tracking-wide text-center rounded-md border-2 border-[#eab308] px-10  py-2 text-base font-medium text-charcoal transition hover:bg-charcoal hover:text-white focus:outline-none focus:ring'>
+          className='self-center tracking-wide text-center rounded-md border-2 border-yellowbg px-10  py-2 text-base font-medium text-charcoal transition hover:bg-charcoal hover:text-white focus:outline-none focus:ring'>
           View All
         </Link>
       </div>

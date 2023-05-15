@@ -23,6 +23,7 @@ import OrderSuccess from './components/purchase/ordersuccess';
 import { HelmetProvider } from 'react-helmet-async';
 import ProjectDescription from './components/projects/ProjectDescription';
 import ServiceDescription from './components/whatWeDoSection/servicesdescription';
+import Pages from './components/resources/pages';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -197,6 +198,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <>
                   <Nav />
                   <Studio />
+                </>
+              }
+            />
+            <Route
+              exact
+              path='/resources/:slug'
+              element={
+                <>
+                  <Nav />
+                  <Pages />
                 </>
               }
             />

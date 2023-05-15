@@ -29,7 +29,7 @@ const ServiceDescription = () => {
         {data &&
           data.docs[0].descriptor.map((image, index) => (
             <>
-            <div id='photos' className='text-white mb-6 mt-6'>{image.description}</div>
+            <div id='photos' className='text-white mb-6 mt-6 border-4 border-yellowbg p-4'>{image.description}</div>
               {/* <div className={`text-3xl text-white py-${index+1}`}>{image.description}</div> */}
               <img
                 id='photos'

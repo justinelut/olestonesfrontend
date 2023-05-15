@@ -28,11 +28,11 @@ function Blogs() {
       ref={scope}
       class='relative py-24 bg-fill overflow-hidden'>
       <div class='container px-4 mx-auto'>
-        <h2 class='mb-5 text-8xl md:text-8xl text-gray-700 xl:text-8xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
-          Our Blogs
+        <h2 class='mb-5 text-4xl md:text-6xl text-gray-700 xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+          <span className='text-white'>Our</span> Blogs
         </h2>
         <p class='mb-16 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
-          Read and learn from our articles
+          Read and learn from our experience based articles
         </p>
         <div class='md:max-w-6xl mx-auto'>
           <div className='grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full'>
@@ -41,7 +41,7 @@ function Blogs() {
                 <Link to={'/blog/' + post.slug}>
                   <div
                     id='project'
-                    className='overflow-hidden bg-gray-700 transition-shadow duration-30 rounded'>
+                    className='overflow-hidden bg-gray-900 transition-shadow duration-30 rounded'>
                     <a
                       href='/'
                       aria-label='Article'>
@@ -52,14 +52,14 @@ function Blogs() {
                       />
                     </a>
                     <div className='py-5 px-5'>
-                      <p className='mb-2 text-xs font-semibold text-white uppercase'>
+                      <p className='mb-2 text-xs font-semibold text-yellowbg'>
                         {FormatDay(post.updatedAt)}
                       </p>
                       <a
                         href='/'
                         aria-label='Article'
                         className='inline-block mb-3 text-white transition-colors duration-200 hover:text-deep-purple-accent-700'>
-                        <p className='text-2xl font-bold leading-5'>
+                        <p className='text-2xl font-bold'>
                           {post.title}
                         </p>
                       </a>
