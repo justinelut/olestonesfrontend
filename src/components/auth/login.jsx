@@ -62,16 +62,16 @@ export default function Login() {
   return (
     <section className='bg-inherit'>
       <div className='lg:grid lg:min-h-screen lg:grid-cols-12'>
-        <section className='relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6'>
+        <section className='relative flex h-32 items-end bg-black-900 lg:col-span-5 lg:h-full xl:col-span-6'>
           <img
             alt='Night'
             src={house}
-            className='absolute inset-0 h-full w-full object-cover opacity-80'
+            className='absolute inset-0 h-full w-full object-cover opacity-90'
           />
 
           <div className='hidden lg:relative lg:block lg:p-12'>
             <a
-              className='block text-white'
+              className='block text-yellowbg'
               href='/'>
               <span className='sr-only'>Home</span>
               <svg
@@ -87,9 +87,9 @@ export default function Login() {
             </a>
 
             <h2 className='mt-6 text-2xl font-bold text-black-900 sm:text-3xl md:text-4xl text-white'>
-              Welcome back!
+              Welcome back
             </h2>
-            <p className='mt-4 leading-relaxed text-white'>
+            <p className='mt-4 leading-relaxed text-xl text-white'>
               Enter your login details
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Login() {
           <div className='max-w-xl lg:max-w-3xl'>
             <div className='relative -mt-16 block lg:hidden'>
               <a
-                className='inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20'
+                className='inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-yellowbg sm:h-20 sm:w-20'
                 href='/'>
                 <span className='sr-only'>Home</span>
                 <svg
@@ -117,7 +117,7 @@ export default function Login() {
               </a>
 
               <h1 className='mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl'>
-                Welcome back!
+                Welcome back
               </h1>
             </div>
             {succMessage
@@ -130,7 +130,7 @@ export default function Login() {
               <div className='col-span-6'>
                 <label
                   htmlFor='Email'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-xl font-medium text-black'>
                   Email
                 </label>
 
@@ -139,7 +139,7 @@ export default function Login() {
                   id='email'
                   name='email'
                   placeholder='Email'
-                  className='w-full bg-inherit rounded-md text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500'
+                  className='w-full bg-inherit rounded-md text-black p-4 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg text-xl'
                   {...register('email', {
                     required: true,
                     pattern: /^\S+@\S+$/i,
@@ -158,7 +158,7 @@ export default function Login() {
               <div className='col-span-6 sm:col-span-3'>
                 <label
                   htmlFor='Password'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-xl font-medium text-gray-800'>
                   Password
                 </label>
 
@@ -167,7 +167,7 @@ export default function Login() {
                   id='password'
                   name='password'
                   placeholder='Password'
-                  className='w-full bg-inherit rounded-md text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500'
+                  className='w-full bg-inherit rounded-md text-black p-4 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg text-xl'
                   {...register('password', { required: true, minLength: 6 })}
                 />
                 {errors.password?.type === 'required' && (
@@ -181,16 +181,16 @@ export default function Login() {
               </div>
 
               <div className='col-span-6 sm:flex sm:items-center sm:gap-4'>
-                <button className='inline-block shrink-0 rounded-md border border-gray-500 bg-yellowbg px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring active:text-blue-500'>
+                <button className='inline-block shrink-0 rounded-md border border-black bg-yellowbg px-12 py-3 font-medium text-white text-base transition focus:outline-none focus:ring active:text-blue-500'>
                   Log In
                 </button>
               </div>
               <div className='col-span-6 sm:flex sm:items-center sm:gap-4'>
-                <p className='mt-4 text-base text-gray-500 sm:mt-0'>
+                <p className='mt-4 text-xl text-black sm:mt-0'>
                   Dont have an account? &nbsp;
                   <Link
                     to={`/signup/${redirect ? `?redirect=${redirect}` : ''}`}
-                    className='text-gray-700 underline'>
+                    className='text-gray-900 font-medium underline'>
                     Signup
                   </Link>
                   .

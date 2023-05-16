@@ -88,9 +88,9 @@ export default function Footer() {
       <div className='flex bg-black p-4'>
         <WhatsAppWidget
           className='ml-50'
-          companyName='Olestone Builders'
+          companyName='Ole Stones Builders'
           replyTimeText='Typically replies within no time'
-          message="Welcome to Olestones Builders, Tell us what you would like us to do for you"
+          message='Welcome to Ole Stones Builders, Tell us what you would like us to do for you.'
           phoneNumber='+254707782830'
         />
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
@@ -152,19 +152,23 @@ export default function Footer() {
             </div>
           </div>
           <div className='flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row bg-gray-900 opacity-60'>
-            <p className='text-lg text-text text-white'>
+            {/* <p className='text-lg text-text text-white'>
               © Copyright {new Date().getFullYear()} {data && data.name}. All
               rights reserved.
+            </p> */}
+            <p className='text-lg text-text text-white'>
+              © Copyright {new Date().getFullYear()}. Ole Stones Builders & Logistics. All
+              Rights Reserved.
             </p>
 
             <div className='flex items-center text-yellow mt-4 space-x-4 sm:mt-0'>
-              <TwitterShareButton url={'https://olestonesbuilders.co.ke'}>
+              <TwitterShareButton url={'https://www.olestonesbuilders.co.ke'}>
                 <TwitterIcon size={32} />
               </TwitterShareButton>
-              <WhatsappShareButton url={'https://olestonesbuilders.co.ke'}>
+              <WhatsappShareButton url={'https://www.olestonesbuilders.co.ke'}>
                 <WhatsappIcon size={32} />
               </WhatsappShareButton>
-              <FacebookShareButton url={'https://olestonesbuilders.co.ke'}>
+              <FacebookShareButton url={'https://www.olestonesbuilders.co.ke'}>
                 <FacebookIcon size={32} />
               </FacebookShareButton>
             </div>

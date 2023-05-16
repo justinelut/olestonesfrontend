@@ -15,9 +15,9 @@ const ProjectDescription = () => {
   return (
     <section
       ref={scope}
-      class='py-24 bg-gray-800 bg-blueGray-50 overflow-hidden'>
+      class='py-24 bg-gray-900 bg-blueGray-50 overflow-hidden'>
       <div class='container px-4 mx-auto'>
-        <h2 class='mb-5 text-4xl md:text-8xl text-yellowbg xl:text-8xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+        <h2 class='mb-5 text-4xl md:text-5xl text-yellowbg xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
           {data && data.docs[0].title}
         </h2>
         <p class='mb-16 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>

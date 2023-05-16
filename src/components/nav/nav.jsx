@@ -16,8 +16,9 @@ const Nav = () => {
           <div>
             <div className='flex items-center justify-between py-3 mr-2 md:py-5 md:block'>
               <Link to='/'>
-                <h1 className='font-semibold text-base'>
-                  Ole Stones <span className='text-white'>Builders & Logistics</span>
+                <h1 className='font-semibold text-base border-white  hover:border hover:p-[1px] focus-visible:border-black rounded-md duration-150'>
+                  Ole Stones{' '}
+                  <span className='text-white'>Builders & Logistics</span>
                 </h1>
               </Link>
               <div className='md:hidden'>
@@ -61,28 +62,28 @@ const Nav = () => {
                 navbar ? 'block' : 'hidden'
               }`}>
               <ul className='items-center justify-center max-md:space-y-4 space-y-4 md:flex md:space-x-8 md:space-y-0 max-md:flex max-md:flex-col'>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/about'>About</Link>
                 </li>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/services'>Services</Link>
                 </li>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/projects'>Projects</Link>
                 </li>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/blog'>Blog</Link>
                 </li>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/products'>Products</Link>
                 </li>
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/gallery'>Gallery</Link>
                 </li>
                 {/* <li className='text-charcoal font-medium text-lg tracking-wider transition border-[#eab308]  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/studio'>Gallery</Link>
                 </li> */}
-                <li className='text-black font-medium text-sm tracking-wider transition border-yellowbg  hover:border-b hover:scale-110 duration-150'>
+                <li className='text-black font-medium text-sm tracking-wider transition border-white  hover:border-b hover:scale-110 duration-150'>
                   <Link to='/contact'>Contact Us</Link>
                 </li>
               </ul>

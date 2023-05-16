@@ -28,10 +28,10 @@ function Blogs() {
       ref={scope}
       class='relative py-24 bg-fill overflow-hidden'>
       <div class='container px-4 mx-auto'>
-        <h2 class='mb-5 text-4xl md:text-6xl text-gray-700 xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
+        <h2 class='mb-5 text-4xl md:text-6xl text-black xl:text-6xl text-center font-bold font-heading font-heading tracking-px-n leading-none'>
           <span className='text-white'>Our</span> Blogs
         </h2>
-        <p class='mb-16 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
+        <p class='mb-16 text-lg md:text-2xl text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
           Read and learn from our experience based articles
         </p>
         <div class='md:max-w-6xl mx-auto'>
@@ -59,7 +59,7 @@ function Blogs() {
                         href='/'
                         aria-label='Article'
                         className='inline-block mb-3 text-white transition-colors duration-200 hover:text-deep-purple-accent-700'>
-                        <p className='text-2xl font-bold'>
+                        <p className='text-2xl font-semibold'>
                           {post.title}
                         </p>
                       </a>
@@ -71,7 +71,7 @@ function Blogs() {
           <Link
             class='flex mt-10 justify-center items-center text-center font-semibold text-white hover:text-gray-800'
             to='/blog'>
-            <span class='mr-2.5'>
+            <span class='mr-2.5 text-xl'>
               Read all {data && data.totalDocs} Blogs posts
             </span>
             <svg

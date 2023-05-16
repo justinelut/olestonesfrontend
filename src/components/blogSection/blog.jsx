@@ -85,7 +85,7 @@ export default function Blog() {
   return (
     <div className='relative mb-2 my-6'>
       <div className=' flex flex-col justify-center items-center'>
-        <h1 className='blogs font-medium text-3xl my-5  text-center mb-5'>
+        <h1 className='blogs font-medium text-3xl my-5 text-center mb-5'>
           Blogs
         </h1>
 

@@ -77,9 +77,9 @@ function Aboutus() {
         class='relative bg-fill py-20 overflow-hidden'>
         <div class='container px-4 mx-auto'>
           <div class='max-w-3xl mx-auto text-center'>
-            <h1 class='font-heading text-4xl xs:text-4xl md:text-6xl sm:text-2xl font-bold text-gray-800 mb-24'>
+            <h1 class='font-heading text-4xl xs:text-4xl md:text-6xl sm:text-2xl font-bold text-black mb-24'>
               <span>What We do at </span>
-              <span class='font-serif italic text-white'>Ole Stones</span>
+              <span class='font-serif italic text-white'>Ole Stones?</span>
             </h1>
           </div>
           <div class='max-w-7xl mx-auto'>

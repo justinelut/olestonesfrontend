@@ -59,7 +59,7 @@ export default function Signup() {
               href='/'>
               <span className='sr-only'>Home</span>
               <svg
-                className='h-8 sm:h-10'
+                className='h-8 sm:h-10 '
                 viewBox='0 0 28 24'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
@@ -84,7 +84,7 @@ export default function Signup() {
           <div className='max-w-xl lg:max-w-3xl'>
             <div className='relative -mt-16 block lg:hidden'>
               <a
-                className='inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20'
+                className='inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-yellowbg sm:h-20 sm:w-20'
                 href='/'>
                 <span className='sr-only'>Home</span>
                 <svg
@@ -115,7 +115,7 @@ export default function Signup() {
               <div className='col-span-6 sm:col-span-3'>
                 <label
                   htmlFor='FirstName'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-base font-medium text-black'>
                   First Name
                 </label>
 
@@ -124,7 +124,7 @@ export default function Signup() {
                   id='firstname'
                   name='firstname'
                   placeholder='First name'
-                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500 rounded-lg'
+                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg rounded-lg'
                   {...register('firstname', { required: true, minLength: 2 })}
                 />
                 {errors.firstname?.type === 'required' && (
@@ -140,7 +140,7 @@ export default function Signup() {
               <div className='col-span-6 sm:col-span-3'>
                 <label
                   htmlFor='LastName'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-base font-medium text-black'>
                   Last Name
                 </label>
                 <input
@@ -148,7 +148,7 @@ export default function Signup() {
                   id='lastname'
                   name='lastname'
                   placeholder='Last name'
-                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500 rounded-lg'
+                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg rounded-lg'
                   {...register('lastname', { required: true, minLength: 2 })}
                 />
 
@@ -165,7 +165,7 @@ export default function Signup() {
               <div className='col-span-6'>
                 <label
                   htmlFor='Email'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-base font-medium text-black'>
                   Email
                 </label>
                 <input
@@ -173,7 +173,7 @@ export default function Signup() {
                   id='email'
                   name='email'
                   placeholder='Email'
-                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500 rounded-lg'
+                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg rounded-lg'
                   {...register('email', {
                     required: true,
                     pattern: /^\S+@\S+$/i,
@@ -192,7 +192,7 @@ export default function Signup() {
               <div className='col-span-6 sm:col-span-3'>
                 <label
                   htmlFor='Password'
-                  className='block text-base font-medium text-gray-700'>
+                  className='block text-base font-medium text-black'>
                   Password
                 </label>
                 <input
@@ -200,7 +200,7 @@ export default function Signup() {
                   id='password'
                   name='password'
                   placeholder='Password'
-                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-400 mb-4 focus:outline-none focus:ring focus:border-blue-500 rounded-lg'
+                  className='bg-inherit w-full text-black p-2 mt-4 border border-gray-800 mb-4 focus:outline-none focus:border-yellowbg rounded-lg'
                   {...register('password', { required: true, minLength: 6 })}
                 />
                 {errors.password?.type === 'required' && (
@@ -221,7 +221,7 @@ export default function Signup() {
                     type='checkbox'
                     id='MarketingAccept'
                     name='marketing_accept'
-                    className='h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm'
+                    className='h-5 w-5 rounded-md border-gray-300 bg-white shadow-sm'
                   />
                   <span className='text-base'>
                     I want to receive emails about events, product updates and
@@ -250,16 +250,16 @@ export default function Signup() {
 
               <div className='col-span-6 sm:flex sm:items-center sm:gap-4'>
                 <button
-                  className='inline-block shrink-0 rounded-lg border bg-yellowbg px-12 py-3 text-base font-medium transition text-white hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500'
+                  className='inline-block shrink-0 rounded-lg border bg-yellowbg px-12 py-3 text-base font-medium transition text-white hover:text-black focus:outline-none focus:ring active:text-black'
                   type='submit'>
                   Create an account
                 </button>
 
-                <p className='mt-4 text-base text-gray-500 sm:mt-0'>
+                <p className='mt-4 text-lg text-gray-800 sm:mt-0'>
                   Already have an account?{' '}
                   <Link
                     to='/login'
-                    className='text-gray-700 underline'>
+                    className='text-gray-700 underline font-medium text-lg'>
                     Log in
                   </Link>
                   .

@@ -21,7 +21,7 @@ const Section = ({ data }) => {
           </p>
           <Link
             to='/gallery'
-            className='text-white tracking-wide text-base sm:text-lg font-bold self-center px-4 sm:px-8 py-2 sm:py-3 border transition focus:outline-none focus:ring whitespace-nowrap bg-[#ffb400]'>
+            className='text-black rounded-sm tracking-wide text-base sm:text-lg font-bold self-center px-4 sm:px-8 py-2 sm:py-3 border transition focus:outline-none focus:ring whitespace-nowrap bg-yellowbg'>
             View Our Work
           </Link>
         </div>

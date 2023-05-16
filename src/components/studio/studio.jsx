@@ -82,12 +82,14 @@ const Studio = () => {
               ))}
           </div>
           {images && hasNextPage ? (
-            <button
-              onClick={fetchMoreData}
-              style={{ width: '200px', height: '60px',margin: 'auto' }}
-              className='animate-pulse tracking-wide text-center rounded-md border-2 border-white px-8 mx-2 py-2 text-lg font-medium text-gray-50 transition hover:bg-gray-800 hover:text-white focus:outline-none focus:ring'>
-              Load More
-            </button>
+            <div className='flex'>
+              <button
+                onClick={fetchMoreData}
+                style={{ width: '200px', height: '60px',margin: 'auto' }}
+                className='mx-auto tracking-wide text-center rounded-md border-2 border-white px-8 py-2 text-lg font-medium text-white bg-black transition hover:bg-gray-800 focus:outline-none focus:ring'>
+                Load More 
+              </button>
+            </div>
           ) : (
             ''
           )}
