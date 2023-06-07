@@ -57,44 +57,48 @@ const Studio = () => {
 
 
   return (
-    <section ref={scope} class='py-8 bg-yellowbg overflow-hidden'>
+    <section
+      ref={scope}
+      class='py-8 bg-yellowbg overflow-hidden'>
       <div class='container px-4 mx-auto'>
         <h2 class='mb-5 text-2xl md:text-4xl text-black xl:text-6xl text-center font-bold font-heading tracking-px-n leading-none'>
           Gallery
         </h2>
         <p class='mb-10 text-lg text-white text-center font-medium leading-normal md:max-w-lg mx-auto'>
-          Welcome to our gallery where we showcase our skills, experience and everything else related to our projects. 
+          Welcome to our gallery where we showcase our skills, experience and
+          everything else related to our projects.
         </p>
-        <div class='md:max-w-6xl mx-auto'>
-          <div class='flex flex-wrap -m-3.5 mb-10'>
+       
+          <div
+            id='gallery'
+            >
             {images &&
               images.map((image, index) => (
-                <div
-                  id='galler'
-                  class='w-full md:w-1/3 p-3.5'>
+                // <div class='w-full md:w-1/3 p-3.5'>
                   <img
                     key={index}
-                    src={image.image.sizes.feature.url}
+                    src={image.image.url}
+                    id='photos'
                     alt=''
-                    className='w-full'
+                    className='w-full block'
                   />
-                </div>
+                // </div>
               ))}
           </div>
           {images && hasNextPage ? (
             <div className='flex'>
               <button
                 onClick={fetchMoreData}
-                style={{ width: '200px', height: '60px',margin: 'auto' }}
+                style={{ width: '200px', height: '60px', margin: 'auto' }}
                 className='mx-auto tracking-wide text-center rounded-md border-2 border-white px-8 py-2 text-lg font-medium text-white bg-black transition hover:bg-gray-800 focus:outline-none focus:ring'>
-                Load More 
+                Load More
               </button>
             </div>
           ) : (
             ''
           )}
         </div>
-      </div>
+     
     </section>
   );
 };

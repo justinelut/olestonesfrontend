@@ -26,7 +26,7 @@ export default function Checkout() {
   const [message, setMessage] = useState();
   const [buttonId, setButtonId] = useState();
   const [btn1Disabled, setBtn1Disabled] = useState(false);
-  const [btn1Text, setBtn1Text] = useState('Initiate Payment');
+  const [btn1Text, setBtn1Text] = useState('Pay Via Mpesa');
   const [btn2Disabled, setBtn2Disabled] = useState(true);
   const [btn2Text, setBtn2Text] = useState('Confirm');
   const [btn2Clicked, setBtn2Clicked] = useState(false);
@@ -65,7 +65,7 @@ export default function Checkout() {
         setBtn2Disabled(false);
         setBtn2Text('Confirm');
       } else {
-        setBtn1Text('Initiate Payment');
+        setBtn1Text('Pay Via Mpesa');
         setBtn1Disabled(false);
       }
     } else if (parseInt(buttonId) === 1) {
@@ -102,7 +102,7 @@ export default function Checkout() {
             `You have successfully purchased, ${order.doc.productname}, redirecting...`
           );
           setTimeout(()=>{
-            navigate(`/products/${pid}/checkout/ordersuccess?ordernumber=${order.doc.ordernumber}`);
+            navigate(`/products/${pid}/checkout/ordersuccess?ordernumber=${order.doc.id}`);
           }, 3000)
         }
       }else{
@@ -192,7 +192,7 @@ export default function Checkout() {
         <div className='grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32'>
           <div className='px-4 pt-8'>
             <p className='text-xl font-medium'>Order Summary</p>
-            <p className='text-gray-400'>Check and confirm your items.</p>
+            <p className='text-gray-500'>Check and confirm your items.</p>
             <div className='mt-8 space-y-3 rounded-lg border px-2 py-4 sm:px-6'>
               <div className='flex flex-col rounded-lg sm:flex-row'>
                 <img
@@ -521,10 +521,10 @@ export default function Checkout() {
               id={0}
               disabled={btn1Disabled}
               className={`mt-4 mb-4 w-full rounded-md ${
-                btn1Disabled ? 'bg-blue-200' : 'bg-blue-900 hover:bg-sky-700'
+                btn1Disabled ? 'bg-blue-200' : 'bg-yellowbg hover:bg-yellow'
               } ${
-                btn1Disabled ? '' : ' active:bg-violet-700'
-              } focus:outline-none focus:ring focus:ring-violet-300 px-6 py-3 font-medium text-slate-50`}>
+                btn1Disabled ? '' : ' active:bg-gray-500'
+              } focus:outline-none focus:ring focus:ring-yellow px-6 py-3 font-medium text-slate-50`}>
               {btn1Text}
             </button>
 
@@ -534,15 +534,16 @@ export default function Checkout() {
               id={1}
               disabled={btn2Disabled}
               className={`mb-8 w-full rounded-md ${
-                btn2Disabled ? 'bg-blue-200' : 'bg-blue-900 hover:bg-sky-700'
+                btn2Disabled ? 'bg-blue-200' : 'bg-yellowbg hover:bg-yellow'
               } ${
-                btn2Disabled ? '' : ' active:bg-violet-700'
-              } focus:outline-none focus:ring focus:ring-violet-300 px-6 py-3 font-medium text-slate-500`}>
+                btn2Disabled ? '' : ' active:bg-gray-500'
+              } focus:outline-none focus:ring focus:ring-yellow px-6 py-3 font-medium text-black`}>
               {btn2Text}
             </button>
 
             <button
               type='button'
+              className='mb-6 border-red-100'
               onClick={() => window.location.reload()}>
               Reload
             </button>

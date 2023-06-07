@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet-async';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
 
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
+
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -86,13 +89,6 @@ export default function Footer() {
       </Helmet> */}
 
       <div className='flex bg-black p-4'>
-        <WhatsAppWidget
-          className='ml-50'
-          companyName='Ole Stones Builders'
-          replyTimeText='Typically replies within no time'
-          message='Welcome to Ole Stones Builders, Tell us what you would like us to do for you.'
-          phoneNumber='+254707782830'
-        />
         <div className=' py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
           <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
             <div className='md:max-w-md lg:col-span-2'>
@@ -157,8 +153,8 @@ export default function Footer() {
               rights reserved.
             </p> */}
             <p className='text-lg text-text text-white'>
-              © Copyright {new Date().getFullYear()}. Ole Stones Builders & Logistics. All
-              Rights Reserved.
+              © Copyright {new Date().getFullYear()}. Ole Stones Builders &
+              Logistics. All Rights Reserved.
             </p>
 
             <div className='flex items-center text-yellow mt-4 space-x-4 sm:mt-0'>
@@ -175,6 +171,19 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <FloatingWhatsApp
+          phoneNumber='+254707782830'
+          accountName='Olestones Builders'
+          avatar='/olestonesavatar.jpg'
+          buttonClassName='absolute mb-24' // Add Tailwind CSS classes here
+          chatboxClassName='absolute mb-24'
+          chatMessage='Welcome to Ole Stones Builders, Tell us what you would like us to do for you.'
+          allowEsc
+          allowClickAway
+          notification
+          notificationSound
+        />
     </>
   );
 }

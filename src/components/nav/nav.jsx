@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useAuthUser, useIsAuthenticated, useSignOut } from 'react-auth-kit';
 import { Link } from 'react-router-dom';
 import UserAccountDetails from './UserAccountDetails';
+import SocialLinks from '../socialLinks/socialLinks';
+import { Helmet } from 'react-helmet-async';
 
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
@@ -11,6 +13,7 @@ const Nav = () => {
 
   return (
     <div className=''>
+      <SocialLinks />
       <nav className='w-full shadow bg-yellowbg'>
         <div className='justify-between px-4 mx-auto md:items-center md:flex'>
           <div>
@@ -21,6 +24,7 @@ const Nav = () => {
                   <span className='text-white'>Builders & Logistics</span>
                 </h1>
               </Link>
+
               <div className='md:hidden'>
                 <button
                   className='p-2 text-black rounded-md outline-none focus:border-white focus:border'

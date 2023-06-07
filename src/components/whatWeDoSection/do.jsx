@@ -34,9 +34,9 @@ function Aboutus() {
                         />
                       </div>
                       <div>
-                        <h3 class='text-xl text-black font-semibold'>
+                        <h2 class='text-xl text-black font-semibold'>
                           {service.title}
-                        </h3>
+                        </h2>
                         <span class='text-base font-medium text-black'>
                           {service.description.slice(0, 100) + ' ... '}
                           <Link
@@ -67,9 +67,9 @@ function Aboutus() {
                         />
                       </div>
                       <div>
-                        <h3 class='text-xl text-black font-semibold'>
+                        <h2 class='text-xl text-black font-semibold'>
                           {service.title}
-                        </h3>
+                        </h2>
                         <span class='text-base font-medium text-black'>
                           {service.description.slice(0, 100) + ' ... '}
                           <Link
