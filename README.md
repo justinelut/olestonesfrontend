@@ -68,7 +68,7 @@ Before proceeding, ensure that you have the following software installed on your
 3. Run the following command to clone the repository:
 
    ```
-   git clone https://github.com/your-username/olestones-builders-logistics.git
+   git clone https://github.com/justinelut/olestonesfrontend.git
    ```
 
    Replace `your-username` with your GitHub username if you want to fork the repository, or you can clone it directly from the main repository.
@@ -76,7 +76,7 @@ Before proceeding, ensure that you have the following software installed on your
 4. Once the repository is cloned, navigate to the project's directory:
 
    ```
-   cd olestones-builders-logistics
+   cd olestonesfrontend
    ```
 
 ### Installing Dependencies
