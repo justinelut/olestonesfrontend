@@ -49,6 +49,72 @@ The Olestones Builders & Logistics website follows a structured organization to 
 
 - **src/api**: Contains API service files responsible for making HTTP requests to backend services and handling data retrieval and submission.
 
+- ## Cloning and Running the Olestones Builders & Logistics Website Locally
+
+To clone and run the Olestones Builders & Logistics website locally on your machine, please follow the instructions below:
+
+### Prerequisites
+
+Before proceeding, ensure that you have the following software installed on your machine:
+
+- Node.js: The website requires Node.js to be installed. You can download and install it from the official Node.js website: [https://nodejs.org](https://nodejs.org)
+
+### Cloning the Repository
+
+1. Open your terminal or command prompt.
+
+2. Change the current working directory to the location where you want to clone the repository.
+
+3. Run the following command to clone the repository:
+
+   ```
+   git clone https://github.com/your-username/olestones-builders-logistics.git
+   ```
+
+   Replace `your-username` with your GitHub username if you want to fork the repository, or you can clone it directly from the main repository.
+
+4. Once the repository is cloned, navigate to the project's directory:
+
+   ```
+   cd olestones-builders-logistics
+   ```
+
+### Installing Dependencies
+
+1. In the project's directory, install the necessary dependencies by running the following command:
+
+   ```
+   npm install
+   ```
+
+   This command will install all the required packages and libraries specified in the `package.json` file.
+
+### Running the Development Server
+
+1. After the dependencies are installed, start the development server by running the following command:
+
+   ```
+   npm start
+   ```
+
+2. The website will now be running locally on your machine. You can access it in your web browser by visiting [http://localhost:3000](http://localhost:3000).
+
+   Any changes you make to the source code will automatically trigger hot-reloading, allowing you to see the updates in real-time.
+
+### Building for Production
+
+If you want to build the website for production deployment, you can run the following command:
+
+```
+npm run build
+```
+
+This command will create an optimized and minified version of the website in the `build` directory.
+
+You can then deploy the contents of the `build` directory to a web server or hosting platform of your choice.
+
+Feel free to reach out if you have any further questions or issues while cloning and running the website locally.
+
 ## Website URL
 
 The Olestones Builders & Logistics website can be accessed at the following URL: [https://olestonesbuilders.co.ke](https://olestonesbuilders.co.ke).
